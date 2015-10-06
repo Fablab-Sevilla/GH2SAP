@@ -18,9 +18,11 @@ Public Class GH2SAPIO
     ''' new tabs/panels will automatically be created.
     ''' </summary>
     Public Sub New()
-        MyBase.New("GH2SAP", "GH2SAP", _
-                "", _
-                "GH2SAP", "")
+
+        'Adding component information
+        MyBase.New("GH2SAP_IO", "IO", _
+                "Starts or links a SAP2000 instance to GH", _
+                "GH2SAP", "System")
     End Sub
 
     ''' <summary>
@@ -57,6 +59,33 @@ Public Class GH2SAPIO
     ''' to store data in output parameters.</param>
     Protected Overrides Sub SolveInstance(DA As IGH_DataAccess)
 
+        'Declaring general variables
+        Dim mySapObject As cOAPI = Nothing  'Creating the SapObject
+        Dim bIO, bLink, bFlag As Boolean
+        Dim intMode As Integer
+        Dim strPath, strMessage As String
+
+        'Passing values from component inputs to variables
+        If (Not DA.GetData(0, bIO)) Then Return
+        If (Not DA.GetData(1, intMode)) Then Return
+        If (Not DA.GetData(2, bLink)) Then Return
+        If (Not DA.GetData(3, strPath)) Then Return
+
+        If bLink Then
+
+            Try
+                mySapObject = DirectCast(System.Runtime.InteropServices.Marshal.GetActiveObject("CSI.SAP2000.API.SapObject"), cOAPI)
+
+            Catch ex As Exception
+
+                strMessage = "No running instance of the program found or failed to link"
+            End Try
+
+        Else
+
+            strMessage = "File mode not implemented yet"
+
+        End If
 
 
     End Sub
