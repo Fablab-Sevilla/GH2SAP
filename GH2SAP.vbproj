@@ -78,6 +78,7 @@
     <Import Include="System.Diagnostics" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrImport.vb" />
     <Compile Include="GH2SAPInfo.vb" />
     <Compile Include="GH2SAPIO.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
