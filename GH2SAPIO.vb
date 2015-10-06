@@ -1,10 +1,14 @@
-﻿Imports System.Collections.Generic
+﻿'I don't know it it's necessary to add both imports
+Imports System.Collections.Generic
+Imports System
 
 Imports Grasshopper.Kernel
 Imports Rhino.Geometry
+Imports SAP2000v17
 
 
-Public Class GH2SAPComponent
+
+Public Class GH2SAPIO
     Inherits GH_Component
     ''' <summary>
     ''' Each implementation of GH_Component must provide a public 
@@ -23,7 +27,16 @@ Public Class GH2SAPComponent
     ''' Registers all the input parameters for this component.
     ''' </summary>
     Protected Overrides Sub RegisterInputParams(pManager As GH_Component.GH_InputParamManager)
-    End Sub
+
+        Dim dir As String
+        dir = System.Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)
+        dir =
+        pManager.AddBooleanParameter("IO", "IO", "If True, starts SAP2000 and/or links with it", GH_ParamAccess.item, False)
+        pManager.AddIntegerParameter("MODE", "M", "Selects the link mode: 0 -> Static, 1 -> Dynamic...", GH_ParamAccess.item, 0)
+        pManager.AddBooleanParameter("LINK", "L", "If true the GH model links to an existing SAP2000 session, otherwise it starts a new or existing file", GH_ParamAccess.item, True)
+        pManager.AddTextParameter("PATH","P","Establish the filepath to an existing SAP2000 file or to a new one",GH_ParamAccess.item,
+
+    End Sub)
 
     ''' <summary>
     ''' Registers all the output parameters for this component.
