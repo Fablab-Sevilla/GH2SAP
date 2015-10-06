@@ -28,20 +28,26 @@ Public Class GH2SAPIO
     ''' </summary>
     Protected Overrides Sub RegisterInputParams(pManager As GH_Component.GH_InputParamManager)
 
+
         Dim dir As String
         dir = System.Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)
-        dir =
-        pManager.AddBooleanParameter("IO", "IO", "If True, starts SAP2000 and/or links with it", GH_ParamAccess.item, False)
-        pManager.AddIntegerParameter("MODE", "M", "Selects the link mode: 0 -> Static, 1 -> Dynamic...", GH_ParamAccess.item, 0)
-        pManager.AddBooleanParameter("LINK", "L", "If true the GH model links to an existing SAP2000 session, otherwise it starts a new or existing file", GH_ParamAccess.item, True)
-        pManager.AddTextParameter("PATH","P","Establish the filepath to an existing SAP2000 file or to a new one",GH_ParamAccess.item,
+        dir = System.IO.Path.Combine(dir, "GH2SAP\DocumentName.sdb")
 
-    End Sub)
+        pManager.AddBooleanParameter("IO", "IO", "If True, starts SAP2000 and/or links with it", GH_ParamAccess.item, False)
+        pManager.AddIntegerParameter("Mode", "M", "Selects the link mode: 0 -> Static, 1 -> Dynamic...", GH_ParamAccess.item, 0)
+        pManager.AddBooleanParameter("Link", "L", "If true the GH model links to an existing SAP2000 session, otherwise it starts a new or existing file", GH_ParamAccess.item, True)
+        pManager.AddTextParameter("Path", "P", "Establish the filepath to an existing SAP2000 file or to a new one", GH_ParamAccess.item, dir)
+
+    End Sub
 
     ''' <summary>
     ''' Registers all the output parameters for this component.
     ''' </summary>
     Protected Overrides Sub RegisterOutputParams(pManager As GH_Component.GH_OutputParamManager)
+
+        pManager.AddTextParameter("Message", "M", "Output message", GH_ParamAccess.item)
+        pManager.AddBooleanParameter("Flag", "F", "Flag that indicates when the component has finished", GH_ParamAccess.item)
+
     End Sub
 
     ''' <summary>
@@ -50,6 +56,9 @@ Public Class GH2SAPIO
     ''' <param name="DA">The DA object can be used to retrieve data from input parameters and 
     ''' to store data in output parameters.</param>
     Protected Overrides Sub SolveInstance(DA As IGH_DataAccess)
+
+
+
     End Sub
 
     ''' <summary>
@@ -58,9 +67,10 @@ Public Class GH2SAPIO
     ''' </summary>
     Protected Overrides ReadOnly Property Icon() As System.Drawing.Bitmap
         Get
-            'You can add image files to your project resources and access them like this:
-            ' return Resources.IconForThisComponent;
-            Return Nothing
+
+            'Adding the icon to the component
+            Return My.Resources.CSi_IO
+
         End Get
     End Property
 
