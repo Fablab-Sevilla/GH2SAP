@@ -79,7 +79,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GH2SAPInfo.vb" />
-    <Compile Include="GH2SAPComponent.vb" />
+    <Compile Include="GH2SAPIO.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -95,6 +95,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="PtImport.vb" />
+    <Compile Include="Util.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -114,6 +116,24 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CSi_IO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RestraintUtil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Area.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Frame.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\GH2SAP.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

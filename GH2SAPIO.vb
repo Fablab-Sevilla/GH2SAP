@@ -10,6 +10,9 @@ Imports SAP2000v17
 
 Public Class GH2SAPIO
     Inherits GH_Component
+
+    Public Shared mySapObject As cOAPI = Nothing  'Creating the SapObject
+
     ''' <summary>
     ''' Each implementation of GH_Component must provide a public 
     ''' constructor without any arguments.
@@ -60,7 +63,7 @@ Public Class GH2SAPIO
     Protected Overrides Sub SolveInstance(DA As IGH_DataAccess)
 
         'Declaring general variables
-        Dim mySapObject As cOAPI = Nothing  'Creating the SapObject
+
         Dim bIO, bLink, bFlag As Boolean
         Dim intMode As Integer
         Dim strPath, strMessage As String
@@ -79,6 +82,7 @@ Public Class GH2SAPIO
             Catch ex As Exception
 
                 strMessage = "No running instance of the program found or failed to link"
+
             End Try
 
         Else

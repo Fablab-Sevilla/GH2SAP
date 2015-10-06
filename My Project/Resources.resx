@@ -127,6 +127,9 @@
   <data name="Frame" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Frame.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="GH2SAP" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\gh2sap.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Pt" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Pt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

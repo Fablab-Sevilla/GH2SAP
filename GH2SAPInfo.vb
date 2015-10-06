@@ -10,14 +10,13 @@ Public Class GH2SAPInfo
     End Property
     Public Overrides ReadOnly Property Icon As System.Drawing.Bitmap
         Get
-            'Return a 24x24 pixel bitmap to represent this GHA library.
-            Return Nothing
+            Return My.Resources.GH2SAP
         End Get
     End Property
     Public Overrides ReadOnly Property Description As String
         Get
             'Return a short string describing the purpose of this GHA library.
-            Return ""
+            Return "Connects Gh3d to SAP2000"
         End Get
     End Property
     Public Overrides ReadOnly Property Id As System.Guid
@@ -29,13 +28,13 @@ Public Class GH2SAPInfo
     Public Overrides ReadOnly Property AuthorName As String
         Get
             'Return a string identifying you or your company.
-            Return ""
+            Return "Enrique Vázquez, Angel Linares. FabLab Sevilla"""
         End Get
     End Property
     Public Overrides ReadOnly Property AuthorContact As String
         Get
             'Return a string representing your preferred contact details.
-            Return ""
+            Return "Enrique Vázquez, Angel Linares. FabLab Sevilla"
         End Get
     End Property
 End Class
