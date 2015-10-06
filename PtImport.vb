@@ -44,7 +44,7 @@ Public Class PtImport
         Dim ptRef As New Point3d
         Dim strRest As String = Nothing
         Dim strName As String = Nothing
-        Dim sapObject As cOAPI
+        'Dim sapObject As cOAPI
         Dim sapModel As cSapModel
         Dim bRestraint(5), bFlag As Boolean
 
@@ -54,7 +54,13 @@ Public Class PtImport
         If (Not DA.GetData(2, strRest)) Then Return
         If (Not DA.GetData(3, bFlag)) Then Return
 
+        If bFlag Then
 
+            sapModel = mySapObject.SapModel
+
+
+
+        End If
 
     End Sub
 
