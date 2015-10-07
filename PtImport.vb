@@ -47,6 +47,7 @@ Public Class PtImport
         'Dim sapObject As cOAPI
         Dim sapModel As cSapModel
         Dim bRestraint(5), bFlag As Boolean
+        Dim intDum As Integer
 
         'Getting values from inputs
         If (Not DA.GetData(0, ptRef)) Then Return
@@ -58,7 +59,14 @@ Public Class PtImport
 
             sapModel = mySapObject.SapModel
 
+            'Converting the restraint string into a boolean list
+            For i As Integer = 0 To 5
+                intDum = Convert.ToInt32(strRest(i))
+                bRestraint(i) = Convert.ToBoolean(intDum)
+            Next
 
+            sapModel.PointObj.AddCartesian(ptRef.X, ptRef.Y, ptRef.Z, Name)
+            sapModel.PointObj.SetRestraint(Name, bRestraint)
 
         End If
 
