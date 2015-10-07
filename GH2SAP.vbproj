@@ -13,7 +13,8 @@
     <AssemblyName>GH2SAP</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>Windows</MyType>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug64|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -32,6 +33,7 @@
     <OutputPath>bin\</OutputPath>
     <DocumentationFile>GH2SAP.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <OptionExplicit>On</OptionExplicit>
@@ -49,6 +51,7 @@
     <Reference Include="SAP2000v17">
       <HintPath>C:\Program Files (x86)\Computers and Structures\SAP2000 17\SAP2000v17.dll</HintPath>
       <Private>False</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -80,7 +83,6 @@
   <ItemGroup>
     <Compile Include="FrImport.vb" />
     <Compile Include="GH2SAPInfo.vb" />
-    <Compile Include="GH2SAPIO.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -96,6 +98,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="GH2SAPIO.vb" />
     <Compile Include="PtImport.vb" />
     <Compile Include="Util.vb" />
   </ItemGroup>
@@ -119,7 +122,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\CSi_IO.png" />
+    <None Include="Resources\CSiIO.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\RestraintUtil.png" />
@@ -156,5 +159,7 @@ Erase "$(TargetPath)"</PostBuildEvent>
     <StartArguments>
     </StartArguments>
     <StartAction>Program</StartAction>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
 </Project>

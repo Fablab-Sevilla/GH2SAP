@@ -67,9 +67,14 @@ Public Class PtImport
 
             sapModel.PointObj.AddCartesian(ptRef.X, ptRef.Y, ptRef.Z, Name)
             sapModel.PointObj.SetRestraint(Name, bRestraint)
+            DA.SetData(0, True)
 
+        Else
+
+            DA.SetData(0, False)
 
         End If
+
 
     End Sub
 

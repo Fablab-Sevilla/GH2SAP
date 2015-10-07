@@ -4,8 +4,8 @@ Imports Grasshopper.Kernel
 Imports Rhino.Geometry
 
 
-Public Class $componentclassname$
-	Inherits GH_Component
+Public Class FrImport
+    Inherits GH_Component
     ''' <summary>
     ''' Initializes a new instance of the FrImport class.
     ''' </summary>

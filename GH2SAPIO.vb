@@ -1,31 +1,22 @@
-﻿'I don't know it it's necessary to add both imports
-Imports System.Collections.Generic
-Imports System
+﻿Imports System.Collections.Generic
 
 Imports Grasshopper.Kernel
 Imports Rhino.Geometry
 Imports SAP2000v17
 
 
-
 Public Class GH2SAPIO
     Inherits GH_Component
-
-    Public Shared mySapObject As cOAPI = Nothing  'Creating the SapObject
-
     ''' <summary>
-    ''' Each implementation of GH_Component must provide a public 
-    ''' constructor without any arguments.
-    ''' Category represents the Tab in which the component will appear, 
-    ''' Subcategory the panel. If you use non-existing tab or panel names, 
-    ''' new tabs/panels will automatically be created.
+    ''' Initializes a new instance of the GH2SAPIO class.
     ''' </summary>
-    Public Sub New()
+    ''' 
+    Public Shared mySapObject As cOAPI
 
-        'Adding component information
-        MyBase.New("GH2SAP_IO", "IO", _
-                "Starts or links a SAP2000 instance to GH", _
-                "GH2SAP", "System")
+    Public Sub New()
+        MyBase.New("IO", "IO", _
+                    "Starts or link to an existing SAP2000 session", _
+                    "GH2SAP", "Tools")
     End Sub
 
     ''' <summary>
@@ -66,7 +57,8 @@ Public Class GH2SAPIO
 
         Dim bIO, bLink, bFlag As Boolean
         Dim intMode As Integer
-        Dim strPath, strMessage As String
+        Dim strPath As String = Nothing
+        Dim strMessage As String = Nothing
 
         'Passing values from component inputs to variables
         If (Not DA.GetData(0, bIO)) Then Return
@@ -74,11 +66,15 @@ Public Class GH2SAPIO
         If (Not DA.GetData(2, bLink)) Then Return
         If (Not DA.GetData(3, strPath)) Then Return
 
+        bFlag = False
+        strMessage = "Waiting..."
+
         If bLink Then
 
             Try
                 mySapObject = DirectCast(System.Runtime.InteropServices.Marshal.GetActiveObject("CSI.SAP2000.API.SapObject"), cOAPI)
-
+                bFlag = True
+                strMessage = "Connected!"
             Catch ex As Exception
 
                 strMessage = "No running instance of the program found or failed to link"
@@ -91,6 +87,9 @@ Public Class GH2SAPIO
 
         End If
 
+        DA.SetData(0, strMessage)
+        DA.SetData(1, bFlag)
+
 
     End Sub
 
@@ -100,21 +99,19 @@ Public Class GH2SAPIO
     ''' </summary>
     Protected Overrides ReadOnly Property Icon() As System.Drawing.Bitmap
         Get
-
-            'Adding the icon to the component
-            Return My.Resources.CSi_IO
+            'You can add image files to your project resources and access them like this:
+            ' return Resources.IconForThisComponent;
+            Return My.Resources.CSiIO
 
         End Get
     End Property
 
     ''' <summary>
-    ''' Each component must have a unique Guid to identify it. 
-    ''' It is vital this Guid doesn't change otherwise old ghx files 
-    ''' that use the old ID will partially fail during loading.
+    ''' Gets the unique ID for this component. Do not change this ID after release.
     ''' </summary>
     Public Overrides ReadOnly Property ComponentGuid() As Guid
         Get
-            Return New Guid("{82f2260c-da98-49be-8585-233338f54372}")
+            Return New Guid("{8cd5633d-6ec0-490b-9afc-ea2164e16751}")
         End Get
     End Property
 End Class

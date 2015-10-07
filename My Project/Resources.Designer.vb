@@ -73,9 +73,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property CSi_IO() As System.Drawing.Bitmap
+        Friend ReadOnly Property CSiIO() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("CSi_IO", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("CSiIO", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
