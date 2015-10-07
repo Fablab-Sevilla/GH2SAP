@@ -10,9 +10,9 @@ Public Class FrImport
     ''' Initializes a new instance of the FrImport class.
     ''' </summary>
     Public Sub New()
-        MyBase.New("$componentvisualname$", "Nickname", _
-                    "Description", _
-                    "Category", "Subcategory")
+        MyBase.New("FrImport", "FrImp", _
+                    "Imports frames from line geometry", _
+                    "GH2SAP", "Elements")
     End Sub
 
     ''' <summary>
@@ -40,9 +40,9 @@ Public Class FrImport
     ''' </summary>
     Protected Overrides ReadOnly Property Icon() As System.Drawing.Bitmap
         Get
-            'You can add image files to your project resources and access them like this:
-            ' return Resources.IconForThisComponent;
-            Return Nothing
+
+            Return My.Resources.Frame
+
         End Get
     End Property
 
