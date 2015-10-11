@@ -23,7 +23,7 @@ Public Class PtImport
     Protected Overrides Sub RegisterInputParams(pManager As GH_Component.GH_InputParamManager)
         pManager.AddPointParameter("Point", "P", "Point/s to add to SAP2000", GH_ParamAccess.item)
         pManager.AddTextParameter("Name", "N", "Point name in SAP2000", GH_ParamAccess.item, "pt")
-        pManager.AddTextParameter("Restraint", "R", "Point restraint condition", GH_ParamAccess.item)
+        pManager.AddTextParameter("Restraint", "R", "Point restraint condition", GH_ParamAccess.item, "000000")
         pManager.AddBooleanParameter("Start", "S", "Boolean flag to start importing", GH_ParamAccess.item, False)
     End Sub
 
