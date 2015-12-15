@@ -47,6 +47,7 @@ Public Class ShellImport
         Dim strAreaSect As String = Nothing
         Dim strName As String = Nothing
         Dim bFlag As New Boolean
+        Dim VtxNumber As Integer
 
         'Getting values from inputs
         If (Not DA.GetData(0, meshArea)) Then Return
@@ -57,7 +58,23 @@ Public Class ShellImport
         'Checking toggle
         If bFlag Then
 
+            'Iterating through the mesh faces
+            For Each face As Rhino.Geometry.MeshFace In meshArea.Faces
 
+                'Getting the number of vertex in every face.
+                If face.IsTriangle Then
+                    VtxNumber = 3
+                ElseIf face.IsQuad Then
+                    VtxNumber = 4
+                End If
+
+
+
+
+
+
+
+            Next
 
 
             'Turning pass value True
