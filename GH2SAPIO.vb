@@ -69,11 +69,10 @@ Public Class GH2SAPIO
         bFlag = False
         strMessage = "Waiting..."
 
-        If bLink Then
-
+        If bLink = True Then
+            bFlag = True
             Try
                 mySapObject = DirectCast(System.Runtime.InteropServices.Marshal.GetActiveObject("CSI.SAP2000.API.SapObject"), cOAPI)
-                bFlag = True
                 strMessage = "Connected!"
             Catch ex As Exception
 
