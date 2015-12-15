@@ -44,10 +44,8 @@ Public Class FrImport
         Dim strFrameSect As String = Nothing
         Dim strName As String = Nothing
         Dim bFlag As New Boolean
-        Dim VtxNumber As Integer
         Dim sapModel As cSapModel
-        Dim pt0, pt1 As Point3d
-        Dim x(), y(), z() As Double
+        Dim x(1), y(1), z(1) As Double
 
         'Getting values from inputs
         If (Not DA.GetData(0, Frame)) Then Return
@@ -55,23 +53,22 @@ Public Class FrImport
         If (Not DA.GetData(2, strName)) Then Return
         If (Not DA.GetData(3, bFlag)) Then Return
 
+
+
         'Checking toggle
         If bFlag Then
 
             'Initializing sapModel
             sapModel = mySapObject.SapModel
 
+            x(0) = Frame.FromX
+            y(0) = Frame.FromY
+            z(0) = Frame.FromZ
+            x(1) = Frame.ToX
+            y(1) = Frame.ToY
+            z(1) = Frame.ToZ
 
-            VtxNumber = 2
-            pt0 = Frame.From
-            pt0 = Frame.To
-
-            x(0) = pt0.X
-            y(0) = pt0.Y
-            z(0) = pt0.Z
-            x(1) = pt1.X
-            y(1) = pt1.Y
-            z(1) = pt1.Z
+            sapModel.FrameObj.AddByCoord(x(0), y(0), z(0), x(1), y(1), z(1), strName,,)
 
             'Turning pass value True
             DA.SetData(0, True)
