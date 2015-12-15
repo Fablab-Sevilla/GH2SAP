@@ -92,11 +92,26 @@ Public Class ShellImport
 
                 ElseIf face.IsQuad Then
                     Dim x(3), y(3), z(3) As Double
+
                     VtxNumber = 4
                     pt0 = meshArea.Vertices.Item(face.A)
                     pt1 = meshArea.Vertices.Item(face.B)
                     pt2 = meshArea.Vertices.Item(face.C)
                     pt2 = meshArea.Vertices.Item(face.D)
+
+                    x(0) = pt0.X
+                    y(0) = pt0.Y
+                    z(0) = pt0.Z
+                    x(1) = pt1.X
+                    y(1) = pt1.Y
+                    z(1) = pt1.Z
+                    x(2) = pt2.X
+                    y(2) = pt2.Y
+                    z(2) = pt2.Z
+                    x(3) = pt3.X
+                    y(3) = pt3.Y
+                    z(3) = pt3.Z
+
                 End If
 
 
