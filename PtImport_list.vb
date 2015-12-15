@@ -21,9 +21,9 @@ Public Class PtImport
     ''' Registers all the input parameters for this component.
     ''' </summary>
     Protected Overrides Sub RegisterInputParams(pManager As GH_Component.GH_InputParamManager)
-        pManager.AddPointParameter("Point", "P", "Point/s to add to SAP2000", GH_ParamAccess.item)
-        pManager.AddTextParameter("Name", "N", "Point name in SAP2000", GH_ParamAccess.item, "pt")
-        pManager.AddTextParameter("Restraint", "R", "Point restraint condition", GH_ParamAccess.item, "000000")
+        pManager.AddPointParameter("Point", "P", "Point/s to add to SAP2000", GH_ParamAccess.list)
+        pManager.AddTextParameter("Name", "N", "Point name in SAP2000", GH_ParamAccess.list, "pt")
+        pManager.AddTextParameter("Restraint", "R", "Point restraint condition", GH_ParamAccess.list, "111111")
         pManager.AddBooleanParameter("Start", "S", "Boolean flag to start importing", GH_ParamAccess.item, False)
     End Sub
 
@@ -31,7 +31,7 @@ Public Class PtImport
     ''' Registers all the output parameters for this component.
     ''' </summary>
     Protected Overrides Sub RegisterOutputParams(pManager As GH_Component.GH_OutputParamManager)
-        pManager.AddBooleanParameter("Pass", "P", "Pass value. True when the points has been loaded into SAP2000", GH_ParamAccess.item)
+        pManager.AddBooleanParameter("Pass", "P", "Pass value. True when SAP2000 is loaded", GH_ParamAccess.item)
     End Sub
 
     ''' <summary>
@@ -41,12 +41,12 @@ Public Class PtImport
     Protected Overrides Sub SolveInstance(DA As IGH_DataAccess)
 
         'General variables
-        Dim ptRef As New Point3d
-        Dim strRest As String = Nothing
-        Dim strName As String = Nothing
+        Dim ptRef() As Point3d
+        Dim strRest() As String = Nothing
+        Dim strName() As String = Nothing
         'Dim sapObject As cOAPI
         Dim sapModel As cSapModel
-        Dim bRestraint(5), bFlag As Boolean
+        Dim bRestraint()(), bFlag As Boolean
         Dim intDum As Integer
 
         'Getting values from inputs
@@ -60,14 +60,29 @@ Public Class PtImport
             sapModel = mySapObject.SapModel
 
             'Converting the restraint string into a boolean list
-            For i As Integer = 0 To 5
-                intDum = Convert.ToInt32(strRest(i))
-                bRestraint(i) = Convert.ToBoolean(intDum)
+            For j As Integer = 0 To strName.GetLength(0) - 1
+                For i As Integer = 0 To 5
+                    intDum = Convert.ToInt32(strRest(j)(i))
+                    bRestraint(j)(i) = Convert.ToBoolean(intDum)
+                Next
             Next
 
-            sapModel.PointObj.AddCartesian(ptRef.X, ptRef.Y, ptRef.Z, Name)
-            sapModel.PointObj.SetRestraint(Name, bRestraint)
-            DA.SetData(0, True)
+            If bRestraint.GetLength(0) = ptRef.GetLength(0) Then
+                For i As Integer = 0 To ptRef.GetLength(0) - 1 'Getting ptRef length
+
+                    sapModel.PointObj.AddCartesian(ptRef(i).X, ptRef(i).Y, ptRef(i).Z, Name)
+                    sapModel.PointObj.SetRestraint(Name, bRestraint(i))
+                    DA.SetData(0, True)
+
+                Next
+
+            Else
+
+
+
+
+            End If
+
 
         Else
 

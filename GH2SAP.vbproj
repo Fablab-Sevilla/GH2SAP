@@ -99,6 +99,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="GH2SAPIO.vb" />
+    <Compile Include="ShellImport.vb" />
     <Compile Include="PtImport.vb" />
     <Compile Include="Util.vb" />
   </ItemGroup>
