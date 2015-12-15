@@ -19,13 +19,17 @@ Public Class FrImport
     ''' Registers all the input parameters for this component.
     ''' </summary>
     Protected Overrides Sub RegisterInputParams(pManager As GH_Component.GH_InputParamManager)
-
+        pManager.AddLineParameter("Mesh", "M", "Mesh element to export", GH_ParamAccess.item)
+        pManager.AddTextParameter("Frame Section", "FS", "Frame section to apply to the imported element", GH_ParamAccess.item, "Default")
+        pManager.AddTextParameter("Name", "N", "Frame object name", GH_ParamAccess.item, "FrameElemt")
+        pManager.AddBooleanParameter("Start", "S", "Boolean flag to start importing", GH_ParamAccess.item, False)
     End Sub
 
     ''' <summary>
     ''' Registers all the output parameters for this component.
     ''' </summary>
     Protected Overrides Sub RegisterOutputParams(pManager As GH_Component.GH_OutputParamManager)
+        pManager.AddBooleanParameter("Pass", "P", "Pass value. True when the frame objects has been loaded into SAP2000", GH_ParamAccess.item)
     End Sub
 
     ''' <summary>
@@ -41,44 +45,11 @@ Public Class FrImport
         Dim VtxNumber As Integer
 
         'Getting values from inputs
-        If (Not DA.GetData(0, meshArea)) Then Return
-        If (Not DA.GetData(1, strAreaSect)) Then Return
+        If (Not DA.GetData(0, meshLine)) Then Return
+        If (Not DA.GetData(1, strFrameSect)) Then Return
         If (Not DA.GetData(2, strName)) Then Return
         If (Not DA.GetData(3, bFlag)) Then Return
 
-        'Checking toggle
-        If bFlag Then
-
-            'Iterating through the mesh faces
-            For Each face As Rhino.Geometry.MeshFace In meshArea.Faces
-
-                'Getting the number of vertex in every face.
-                If face.IsTriangle Then
-                    VtxNumber = 3
-                ElseIf face.IsQuad Then
-                    VtxNumber = 4
-                End If
-
-
-
-
-
-
-
-            Next
-
-
-            'Turning pass value True
-            DA.SetData(0, True)
-
-        Else
-
-
-
-            'Turning pass value False
-            DA.SetData(0, False)
-
-        End If
 
 
     End Sub
