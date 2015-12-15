@@ -19,6 +19,7 @@ Public Class FrImport
     ''' Registers all the input parameters for this component.
     ''' </summary>
     Protected Overrides Sub RegisterInputParams(pManager As GH_Component.GH_InputParamManager)
+
     End Sub
 
     ''' <summary>
@@ -32,6 +33,54 @@ Public Class FrImport
     ''' </summary>
     ''' <param name="DA">The DA object is used to retrieve from inputs and store in outputs.</param>
     Protected Overrides Sub SolveInstance(DA As IGH_DataAccess)
+
+        Dim meshLine As New LineCurve
+        Dim strLineSect As String = Nothing
+        Dim strName As String = Nothing
+        Dim bFlag As New Boolean
+        Dim VtxNumber As Integer
+
+        'Getting values from inputs
+        If (Not DA.GetData(0, meshArea)) Then Return
+        If (Not DA.GetData(1, strAreaSect)) Then Return
+        If (Not DA.GetData(2, strName)) Then Return
+        If (Not DA.GetData(3, bFlag)) Then Return
+
+        'Checking toggle
+        If bFlag Then
+
+            'Iterating through the mesh faces
+            For Each face As Rhino.Geometry.MeshFace In meshArea.Faces
+
+                'Getting the number of vertex in every face.
+                If face.IsTriangle Then
+                    VtxNumber = 3
+                ElseIf face.IsQuad Then
+                    VtxNumber = 4
+                End If
+
+
+
+
+
+
+
+            Next
+
+
+            'Turning pass value True
+            DA.SetData(0, True)
+
+        Else
+
+
+
+            'Turning pass value False
+            DA.SetData(0, False)
+
+        End If
+
+
     End Sub
 
     ''' <summary>
