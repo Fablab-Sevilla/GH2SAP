@@ -72,7 +72,7 @@ Public Class ShellImport
 
                 'Getting the number of vertex in every face.
                 If face.IsTriangle Then
-                    'Dim x(2), y(2), z(2) As Double
+                    ReDim x(2), y(2), z(2)
                     VtxNumber = 3
                     pt0 = meshArea.Vertices.Item(face.A)
                     pt1 = meshArea.Vertices.Item(face.B)
@@ -90,7 +90,7 @@ Public Class ShellImport
 
 
                 ElseIf face.IsQuad Then
-                    'Dim x(3), y(3), z(3) As Double
+                    ReDim x(3), y(3), z(3)
                     VtxNumber = 4
                     pt0 = meshArea.Vertices.Item(face.A)
                     pt1 = meshArea.Vertices.Item(face.B)
