@@ -52,6 +52,7 @@ Public Class ShellImport
         Dim VtxNumber As Integer
         Dim sapModel As cSapModel
         Dim pt0, pt1, pt2, pt3 As Point3d
+        Dim x(), y(), z() As Double
 
 
         'Getting values from inputs
@@ -69,11 +70,9 @@ Public Class ShellImport
             'Iterating through the mesh faces
             For Each face As Rhino.Geometry.MeshFace In meshArea.Faces
 
-
                 'Getting the number of vertex in every face.
                 If face.IsTriangle Then
-                    Dim x(2), y(2), z(2) As Double
-
+                    'Dim x(2), y(2), z(2) As Double
                     VtxNumber = 3
                     pt0 = meshArea.Vertices.Item(face.A)
                     pt1 = meshArea.Vertices.Item(face.B)
@@ -91,8 +90,7 @@ Public Class ShellImport
 
 
                 ElseIf face.IsQuad Then
-                    Dim x(3), y(3), z(3) As Double
-
+                    'Dim x(3), y(3), z(3) As Double
                     VtxNumber = 4
                     pt0 = meshArea.Vertices.Item(face.A)
                     pt1 = meshArea.Vertices.Item(face.B)
@@ -114,29 +112,19 @@ Public Class ShellImport
 
                 End If
 
-
-
-
-
-
-
+                sapModel.AreaObj.AddByCoord(VtxNumber, x, y, z, strName, , strName)
 
             Next
-
 
             'Turning pass value True
             DA.SetData(0, True)
 
         Else
 
-
-
             'Turning pass value False
             DA.SetData(0, False)
 
         End If
-
-
 
 
     End Sub
