@@ -2,7 +2,8 @@
 
 Imports Grasshopper.Kernel
 Imports Rhino.Geometry
-
+Imports GH2SAP.GH2SAPIO
+Imports SAP2000v17
 
 Public Class ShellImport
     Inherits GH_Component
@@ -43,11 +44,15 @@ Public Class ShellImport
     ''' <param name="DA">The DA object is used to retrieve from inputs and store in outputs.</param>
     Protected Overrides Sub SolveInstance(DA As IGH_DataAccess)
 
+
         Dim meshArea As New Mesh
         Dim strAreaSect As String = Nothing
         Dim strName As String = Nothing
         Dim bFlag As New Boolean
         Dim VtxNumber As Integer
+        Dim sapModel As cSapModel
+        Dim pt0, pt1, pt2, pt3 As Point3d
+
 
         'Getting values from inputs
         If (Not DA.GetData(0, meshArea)) Then Return
@@ -58,15 +63,42 @@ Public Class ShellImport
         'Checking toggle
         If bFlag Then
 
+            'Initializing sapModel
+            sapModel = mySapObject.SapModel
+
             'Iterating through the mesh faces
             For Each face As Rhino.Geometry.MeshFace In meshArea.Faces
 
+
                 'Getting the number of vertex in every face.
                 If face.IsTriangle Then
+                    Dim x(2), y(2), z(2) As Double
+
                     VtxNumber = 3
+                    pt0 = meshArea.Vertices.Item(face.A)
+                    pt1 = meshArea.Vertices.Item(face.B)
+                    pt2 = meshArea.Vertices.Item(face.C)
+
+                    x(0) = pt0.X
+                    y(0) = pt0.Y
+                    z(0) = pt0.Z
+                    x(1) = pt1.X
+                    y(1) = pt1.Y
+                    z(1) = pt1.Z
+                    x(2) = pt2.X
+                    y(2) = pt2.Y
+                    z(2) = pt2.Z
+
+
                 ElseIf face.IsQuad Then
+                    Dim x(3), y(3), z(3) As Double
                     VtxNumber = 4
+                    pt0 = meshArea.Vertices.Item(face.A)
+                    pt1 = meshArea.Vertices.Item(face.B)
+                    pt2 = meshArea.Vertices.Item(face.C)
+                    pt2 = meshArea.Vertices.Item(face.D)
                 End If
+
 
 
 
