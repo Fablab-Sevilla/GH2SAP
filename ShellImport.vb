@@ -62,7 +62,7 @@ Public Class ShellImport
         If (Not DA.GetData(3, bFlag)) Then Return
 
         'Checking toggle
-        If bFlag Then
+        If bFlag = True Then
 
             'Initializing sapModel
             sapModel = mySapObject.SapModel
@@ -95,7 +95,7 @@ Public Class ShellImport
                     pt0 = meshArea.Vertices.Item(face.A)
                     pt1 = meshArea.Vertices.Item(face.B)
                     pt2 = meshArea.Vertices.Item(face.C)
-                    pt2 = meshArea.Vertices.Item(face.D)
+                    pt3 = meshArea.Vertices.Item(face.D)
 
                     x(0) = pt0.X
                     y(0) = pt0.Y
