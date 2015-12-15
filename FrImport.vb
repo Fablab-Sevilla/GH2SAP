@@ -2,6 +2,8 @@
 
 Imports Grasshopper.Kernel
 Imports Rhino.Geometry
+Imports GH2SAP.GH2SAPIO
+Imports SAP2000v17
 
 
 Public Class FrImport
@@ -19,7 +21,7 @@ Public Class FrImport
     ''' Registers all the input parameters for this component.
     ''' </summary>
     Protected Overrides Sub RegisterInputParams(pManager As GH_Component.GH_InputParamManager)
-        pManager.AddLineParameter("Mesh", "M", "Mesh element to export", GH_ParamAccess.item)
+        pManager.AddLineParameter("Frame", "Fr", "Frame element to export", GH_ParamAccess.item)
         pManager.AddTextParameter("Frame Section", "FS", "Frame section to apply to the imported element", GH_ParamAccess.item, "Default")
         pManager.AddTextParameter("Name", "N", "Frame object name", GH_ParamAccess.item, "FrameElemt")
         pManager.AddBooleanParameter("Start", "S", "Boolean flag to start importing", GH_ParamAccess.item, False)
@@ -38,19 +40,47 @@ Public Class FrImport
     ''' <param name="DA">The DA object is used to retrieve from inputs and store in outputs.</param>
     Protected Overrides Sub SolveInstance(DA As IGH_DataAccess)
 
-        Dim meshLine As New LineCurve
-        Dim strLineSect As String = Nothing
+        Dim Frame As New Line
+        Dim strFrameSect As String = Nothing
         Dim strName As String = Nothing
         Dim bFlag As New Boolean
         Dim VtxNumber As Integer
+        Dim sapModel As cSapModel
+        Dim pt0, pt1 As Point3d
+        Dim x(), y(), z() As Double
 
         'Getting values from inputs
-        If (Not DA.GetData(0, meshLine)) Then Return
+        If (Not DA.GetData(0, Frame)) Then Return
         If (Not DA.GetData(1, strFrameSect)) Then Return
         If (Not DA.GetData(2, strName)) Then Return
         If (Not DA.GetData(3, bFlag)) Then Return
 
+        'Checking toggle
+        If bFlag Then
 
+            'Initializing sapModel
+            sapModel = mySapObject.SapModel
+
+
+            VtxNumber = 2
+            pt0 = Frame.From
+            pt0 = Frame.To
+
+            x(0) = pt0.X
+            y(0) = pt0.Y
+            z(0) = pt0.Z
+            x(1) = pt1.X
+            y(1) = pt1.Y
+            z(1) = pt1.Z
+
+            'Turning pass value True
+            DA.SetData(0, True)
+        Else
+
+            'Turning pass value False
+            DA.SetData(0, False)
+
+        End If
 
     End Sub
 
@@ -60,9 +90,7 @@ Public Class FrImport
     ''' </summary>
     Protected Overrides ReadOnly Property Icon() As System.Drawing.Bitmap
         Get
-
             Return My.Resources.Frame
-
         End Get
     End Property
 
