@@ -84,7 +84,8 @@
     <Import Include="System.Diagnostics" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="FrImport.vb" />
+    <Compile Include="DefMaterial.vb" />
+    <Compile Include="FrImport.vb" />
     <Compile Include="GH2SAPInfo.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
