@@ -23,7 +23,7 @@ Public Class DefFrameSection_I
     Protected Overrides Sub RegisterInputParams(pManager As GH_Component.GH_InputParamManager)
 
         pManager.AddTextParameter("Name", "N", "The name of an existing or new frame section property", GH_ParamAccess.item, "IPE300")
-        pManager.AddTextParameter("MatProp", "M", "The name of the material property for the section", GH_ParamAccess.item, "Default")
+        pManager.AddTextParameter("MatProp", "M", "The name of the material property for the section", GH_ParamAccess.item, "A992Fy50")
         pManager.AddNumberParameter("Height", "T3", "The section height", GH_ParamAccess.item, 0.3)
         pManager.AddNumberParameter("TFWidth", "T2", "Top flange width", GH_ParamAccess.item, 0.15)
         pManager.AddNumberParameter("TFThick", "TF", "Top flange thickness", GH_ParamAccess.item, 0.0107)
