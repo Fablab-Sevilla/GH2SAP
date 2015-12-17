@@ -4,7 +4,7 @@ Imports Grasshopper.Kernel
 Imports Rhino.Geometry
 
 
-Public Class DefFrameSection
+Public Class DefFrameSection_I
     Inherits GH_Component
     ''' <summary>
     ''' Initializes a new instance of the DefFrameSection class.
@@ -42,7 +42,7 @@ Public Class DefFrameSection
         Get
             'You can add image files to your project resources and access them like this:
             ' return Resources.IconForThisComponent;
-            Return Nothing
+            Return My.Resources.Frame_I
         End Get
     End Property
 
