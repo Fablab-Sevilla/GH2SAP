@@ -142,6 +142,11 @@
     <None Include="Resources\Pt.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Mat_Steel.png" />
+    <None Include="Resources\Mat_Concrete.png" />
+    <None Include="Resources\Frame_I.png" />
+    <None Include="Resources\Frame_O.png" />
+    <None Include="Resources\Frame_R.png" />
     <Content Include="Resources\GH2SAP.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
