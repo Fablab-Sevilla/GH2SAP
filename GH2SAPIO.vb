@@ -69,20 +69,24 @@ Public Class GH2SAPIO
         bFlag = False
         strMessage = "Waiting..."
 
-        If bLink = True Then
-            bFlag = True
+        If bLink And bIO Then
+
             Try
                 mySapObject = DirectCast(System.Runtime.InteropServices.Marshal.GetActiveObject("CSI.SAP2000.API.SapObject"), cOAPI)
                 strMessage = "Connected!"
+                bFlag = True
+
             Catch ex As Exception
 
                 strMessage = "No running instance of the program found or failed to link"
+                bFlag = False
 
             End Try
 
         Else
 
             strMessage = "File mode not implemented yet"
+            bFlag = False
 
         End If
 
