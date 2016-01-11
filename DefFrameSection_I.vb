@@ -57,7 +57,7 @@ Public Class DefFrameSection_I
         Dim strName As String = Nothing
         Dim strMatProp As String = Nothing
         Dim dT3, dT2, dTF, dTW, dT2B, dTFB As Double
-        Dim intColor As Integer
+        Dim intColor, intTest As Integer
         Dim bFlag As Boolean
         Dim sapModel As cSapModel
 
@@ -78,9 +78,12 @@ Public Class DefFrameSection_I
 
             sapModel = mySapObject.SapModel
 
-            sapModel.PropFrame.SetISection(strName, strMatProp, dT3, dT2, dTF, dTW, dT2B, dTFB, intColor)
+            intTest = sapModel.PropFrame.SetISection(strName, strMatProp, dT3, dT2, dTF, dTW, dT2B, dTFB, intColor)
 
         End If
+
+        'Passing true when profile properly created.
+        If intTest = 0 Then DA.SetData(0, True)
 
     End Sub
 
