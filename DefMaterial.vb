@@ -2,6 +2,8 @@
 
 Imports Grasshopper.Kernel
 Imports Rhino.Geometry
+Imports GH2SAP.GH2SAPIO
+Imports SAP2000v17
 
 
 Public Class DefMaterial
@@ -19,7 +21,8 @@ Public Class DefMaterial
     ''' Registers all the input parameters for this component.
     ''' </summary>
     Protected Overrides Sub RegisterInputParams(pManager As GH_Component.GH_InputParamManager)
-        pManager.AddTextParameter("Material", "Mat", "Material name", GH_ParamAccess.item, "New_Mat")
+        pManager.AddTextParameter("Material", "MatName", "Material name", GH_ParamAccess.item, "New_Mat")
+        pManager.AddTextParameter("Type", "MatType", "Material type", GH_ParamAccess.item, "MATERIAL_STEEL")
         pManager.AddBooleanParameter("Start", "S", "Boolean flag to start importing", GH_ParamAccess.item, False)
     End Sub
 
@@ -34,6 +37,21 @@ Public Class DefMaterial
     ''' </summary>
     ''' <param name="DA">The DA object is used to retrieve from inputs and store in outputs.</param>
     Protected Overrides Sub SolveInstance(DA As IGH_DataAccess)
+        'dimension variables
+        Dim SapModel As cSapModel
+        Dim ret As Long
+        Dim Name As String
+
+        'initialize new material property
+        ret = SapModel.PropMaterial.SetMaterial("Steel", MATERIAL_STEEL)
+
+        'assign isotropic mechanical properties
+        ret = SapModel.PropMaterial.SetMPIsotropic("Steel", 29500, 0.25, 0.000006)
+
+        'assign other properties
+        ret = SapModel.PropMaterial.SetOSteel_1("Steel", 55, 68, 60, 70, 1, 2, 0.02, 0.1, 0.2, -0.1)
+        'SetOSteel_1(Name,Fy,Fu,eFy,eFu,SSType,SSHysType,StrainAtHardening,StrainAtMaxStress,StrainAtRupture,FinalSlope, Optional Temp)
+
     End Sub
 
     ''' <summary>
