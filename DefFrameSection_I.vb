@@ -61,6 +61,7 @@ Public Class DefFrameSection_I
         Dim bFlag As Boolean
         Dim sapModel As cSapModel
 
+
         'Getting values from inputs
         If (Not DA.GetData(0, strName)) Then Return
         If (Not DA.GetData(1, strMatProp)) Then Return
