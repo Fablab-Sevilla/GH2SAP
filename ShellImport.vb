@@ -4,7 +4,10 @@ Imports Grasshopper.Kernel
 Imports Rhino.Geometry
 Imports GH2SAP.GH2SAPIO
 Imports SAP2000v17
+Imports System.Windows.Forms
 
+
+#Region "GHComponent"
 Public Class ShellImport
     Inherits GH_Component
     ''' <summary>
@@ -149,4 +152,27 @@ Public Class ShellImport
             Return New Guid("{6dca9a07-57f7-4e97-8cd3-8f2a6a6e9900}")
         End Get
     End Property
+
+#Region "FormTest"
+
+    'Create an instance of the form
+    Private PopUp As Form1
+
+    Private Sub TestItem(ByVal sender As Object, ByVal e As EventArgs)
+        If (PopUp IsNot Nothing) Then PopUp.Dispose()
+        PopUp = New Form1()
+    End Sub
+
+#End Region
+
+    'Overriding menu items
+    Protected Overrides Sub AppendAdditionalComponentMenuItems(menu As ToolStripDropDown)
+        MyBase.AppendAdditionalComponentMenuItems(menu)
+        GH_DocumentObject.Menu_AppendItem(menu, "Contact", AddressOf TestItem)
+
+    End Sub
+
 End Class
+#End Region
+
+

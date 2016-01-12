@@ -1,0 +1,913 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"key",
+				"key	keyPressed"
+			],
+			[
+				"for",
+				"for	for in"
+			],
+			[
+				"Po",
+				"posOld"
+			],
+			[
+				"pos",
+				"posOld"
+			],
+			[
+				"line",
+				"line	line 3d"
+			],
+			[
+				"_pos",
+				"_pos0"
+			],
+			[
+				"print",
+				"println	println text"
+			],
+			[
+				"id",
+				"idToChase"
+			],
+			[
+				"prin",
+				"println	println var"
+			],
+			[
+				"off",
+				"offspring2"
+			],
+			[
+				"sel",
+				"select_best"
+			],
+			[
+				"num",
+				"numpy  (module)"
+			],
+			[
+				"ave",
+				"Average"
+			],
+			[
+				"re",
+				"requestAverageQ	function"
+			],
+			[
+				"add",
+				"addQualification	function"
+			],
+			[
+				"qua",
+				"qualifications"
+			],
+			[
+				"abs",
+				"absentCounter	statement"
+			],
+			[
+				"absen",
+				"absentNumber	param"
+			],
+			[
+				"time",
+				"timeit	function"
+			],
+			[
+				"fichero",
+				"fichero_lectura	statement"
+			],
+			[
+				"fi",
+				"fichero_escritura"
+			],
+			[
+				"fu",
+				"fichero_escritura"
+			],
+			[
+				"resu",
+				"result"
+			],
+			[
+				"tuple",
+				"tuple2	statement"
+			],
+			[
+				"tu",
+				"tuple1	statement"
+			],
+			[
+				"lst",
+				"lstLetras"
+			],
+			[
+				"float",
+				"floatVar1	statement"
+			],
+			[
+				"cl",
+				"class"
+			],
+			[
+				"he",
+				"height"
+			],
+			[
+				"cell",
+				"cellState"
+			],
+			[
+				"str",
+				"stroke	stroke grey"
+			],
+			[
+				"fill",
+				"fill	fill grey"
+			],
+			[
+				"tex",
+				"text	textSize"
+			],
+			[
+				"angel",
+				"angleMult"
+			],
+			[
+				"_",
+				"_lenMult"
+			],
+			[
+				"len",
+				"lenMult"
+			],
+			[
+				"angle",
+				"angleMult"
+			],
+			[
+				"numtr",
+				"numTreesY"
+			],
+			[
+				"rotate",
+				"rotate	rotate"
+			],
+			[
+				"counter",
+				"counter_int"
+			],
+			[
+				"new",
+				"newPt"
+			],
+			[
+				"stroke",
+				"stroke	stroke grey"
+			],
+			[
+				"mos",
+				"mouse	mouseX"
+			],
+			[
+				"mo",
+				"mouse	mousePressed"
+			],
+			[
+				"step",
+				"stepX"
+			],
+			[
+				"sq",
+				"sqrt	sqrt"
+			],
+			[
+				"mou",
+				"mouse	mouseX"
+			],
+			[
+				"dis",
+				"disp"
+			],
+			[
+				"nPo",
+				"nPointsX"
+			],
+			[
+				"npo",
+				"nPointsY"
+			],
+			[
+				"do",
+				"double"
+			],
+			[
+				"cons",
+				"constrain	constrain"
+			],
+			[
+				"create",
+				"createTriangles"
+			],
+			[
+				"vertex",
+				"vertex	vertex"
+			],
+			[
+				"setu",
+				"setup	setup OpenGL"
+			],
+			[
+				"turt",
+				"turtleBreed"
+			],
+			[
+				"var",
+				"varName"
+			],
+			[
+				"breed",
+				"breedName"
+			],
+			[
+				"pt",
+				"ptExport"
+			],
+			[
+				"write",
+				"writeOBJ"
+			],
+			[
+				"begin",
+				"beginshape	beginShape"
+			],
+			[
+				"framera",
+				"framerate	frameRate (set)"
+			],
+			[
+				"set",
+				"setup	setup"
+			],
+			[
+				"setup",
+				"setup	setup"
+			],
+			[
+				"degr",
+				"degree"
+			],
+			[
+				"a_",
+				"a_parents"
+			],
+			[
+				"parent",
+				"parent_a"
+			],
+			[
+				"b",
+				"b_node"
+			],
+			[
+				"ano",
+				"a_node"
+			],
+			[
+				"test_pare",
+				"test_parent_b"
+			],
+			[
+				"not",
+				"notParentFound"
+			],
+			[
+				"te",
+				"test_parent_a"
+			],
+			[
+				"test",
+				"testNode_a"
+			],
+			[
+				"get",
+				"get_parent"
+			],
+			[
+				"a",
+				"a_node"
+			],
+			[
+				"is",
+				"is_parent"
+			],
+			[
+				"C",
+				"courseName"
+			],
+			[
+				"corse",
+				"courseName"
+			],
+			[
+				"course",
+				"courseName"
+			],
+			[
+				"se",
+				"self"
+			],
+			[
+				"swa",
+				"swapSort"
+			],
+			[
+				"lace",
+				"laceStringRecur"
+			],
+			[
+				"ran",
+				"randint  (function)"
+			],
+			[
+				"played",
+				"playedWord"
+			],
+			[
+				"comp",
+				"compChooseWord"
+			],
+			[
+				"displa",
+				"displayHand({'a':1"
+			],
+			[
+				"dbl",
+				"dblMaxScore"
+			],
+			[
+				"co",
+				"Counter  (class)"
+			],
+			[
+				"letter",
+				"letter"
+			],
+			[
+				"wo",
+				"wordlist"
+			],
+			[
+				"best",
+				"bestWord"
+			],
+			[
+				"hi",
+				"higherScore"
+			],
+			[
+				"Wor",
+				"wordList"
+			],
+			[
+				"leter",
+				"letterCounter"
+			],
+			[
+				"hand",
+				"handLength"
+			],
+			[
+				"fil",
+				"filteredList"
+			],
+			[
+				"han",
+				"handLength"
+			],
+			[
+				"sco",
+				"scoreWord"
+			],
+			[
+				"play",
+				"playGame"
+			],
+			[
+				"user",
+				"userInput"
+			],
+			[
+				"total",
+				"totalScore"
+			],
+			[
+				"Total",
+				"totalScore"
+			],
+			[
+				"word",
+				"  wordList: list of lowercase strings"
+			],
+			[
+				"rec",
+				"recurPower"
+			],
+			[
+				"li",
+				"listB"
+			],
+			[
+				"list",
+				"listA"
+			],
+			[
+				"tpl",
+				"tplTest"
+			],
+			[
+				"lett",
+				"lettersGuessed"
+			],
+			[
+				"le",
+				"lettersGuessed"
+			],
+			[
+				"sec",
+				"secretWord"
+			],
+			[
+				"mont",
+				"monthlyMinPayment"
+			],
+			[
+				"month",
+				"monthlyPayment"
+			],
+			[
+				"mon",
+				"monthlyPayment"
+			],
+			[
+				"lon",
+				"LongestWord"
+			],
+			[
+				"turq",
+				"turquesa"
+			],
+			[
+				"dblc",
+				"dblCoincidences"
+			],
+			[
+				"find",
+				"Findsimilars"
+			],
+			[
+				"l",
+				"l"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "Packages/Processing/Build Systems/Processing.sublime-build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Processing/Build Systems/Processing.sublime-build",
+					""
+				],
+				[
+					"Packages/Processing/Build Systems/Processing.sublime-build",
+					"Re-run sketch"
+				],
+				[
+					"Packages/Processing/Build Systems/Processing.sublime-build",
+					"Run sketch (Processing 3 only)"
+				],
+				[
+					"Packages/Processing/Build Systems/Processing.sublime-build",
+					"Run sketch fullscreen"
+				],
+				[
+					"Packages/Processing/Build Systems/Processing.sublime-build",
+					"Export sketch as application"
+				]
+			],
+			[
+				"Packages/Processing/Build Systems/Processing.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 380.0,
+		"last_filter": "insta",
+		"selected_items":
+		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Add Channel"
+			],
+			[
+				"pa",
+				"Package Control: Remove Package"
+			],
+			[
+				"pac",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"build",
+				"Build: Run sketch fullscreen"
+			],
+			[
+				"package control ins",
+				"Package Control: Install Package"
+			],
+			[
+				"packacontrol ins",
+				"Package Control: Install Package"
+			],
+			[
+				"packacontrol in",
+				"Package Control: Install Package"
+			],
+			[
+				"paca",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ena",
+				"Package Control: Enable Package"
+			],
+			[
+				"Package Control: instal",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: inta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 536.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/F/003_CODE/Git/Forma15",
+		"/F/003_CODE/Git/Forma15/curvas01"
+	],
+	"file_history":
+	[
+		"/F/003_CODE/Git/Forma15/curvas3D01/class_agent.pde",
+		"/F/003_CODE/Git/Forma15/curvas3D01/class_line.pde",
+		"/F/003_CODE/Git/Forma15/curvas3D01/curvas3D01.pde",
+		"/F/003_CODE/Git/GH2SAP/.gitignore",
+		"/F/003_CODE/Git/Forma15/.gitignore",
+		"/F/003_CODE/Git/Forma15/curvas01/curvas01.pde",
+		"/F/003_CODE/Git/Forma15/curvas01/class_agent.pde",
+		"/F/003_CODE/Git/Forma15/Forma15.sublime-project",
+		"/F/003_CODE/Git/Processing/libraries/peasycam/examples/HelloPeasy/HelloPeasy.pde",
+		"/F/003_CODE/Git/ghPython101/Día_003/01_EJ/colours.py",
+		"/F/003_CODE/Git/ghPython101/README.md",
+		"/F/003_CODE/Git/ghPython101/Día_003/01_EJ/RW_polygons.py",
+		"/F/003_CODE/Git/ghPython101/Día_003/01_EJ/Recursive_scaling.py",
+		"/F/003_CODE/Git/ghPython101/Día_003/01_EJ/Planarize.py",
+		"/F/003_CODE/Git/ghPython101/Día_003/01_EJ/Koch_curve.py",
+		"/F/003_CODE/Git/ghPython101/Día_003/01_EJ/divSrf.py",
+		"/F/003_CODE/Git/ghPython101/Día_003/01_EJ/divSrf + panels.py",
+		"/F/003_CODE/Git/ghPython101/Día_002/01_EJ/Ej_002_Random_walker.py",
+		"/F/003_CODE/Git/ghPython101/Día_001/01_EJ/Ej_003_filter_datatree_DivSrf.py",
+		"/F/003_CODE/Git/ghPython101/.gitignore",
+		"/F/003_CODE/Git/ghPython101/.project",
+		"/F/003_CODE/Git/ghPython101/.git/logs/refs/heads/D_002",
+		"/C/Users/Ángel/AppData/Roaming/Sublime Text 3/Packages/User/Anaconda.sublime-settings",
+		"/C/Users/Ángel/AppData/Roaming/Sublime Text 3/Packages/User/Python.sublime-settings",
+		"/C/Users/Ángel/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/F/003_CODE/Git/ghPython101/Día_001/01_EJ/Ej_002_Random_walker.py",
+		"/F/003_CODE/Git/GEN_ALG_PY/singlemax_modificado.py",
+		"/F/002_Dropbox/Dropbox/PFC/CAD/CODE/GH_Parking_core.py",
+		"/F/003_CODE/Git/GEN_ALG_PY/000_DOC/scripts_curso_ice/Floatmaxsimple.py",
+		"/F/002_Dropbox/Dropbox/PFC/CAD/CODE/GH_Mod_generation002.py",
+		"/F/002_Dropbox/Dropbox/PFC/CAD/CODE/ModuleClass003.py",
+		"/F/003_CODE/Git/GEN_ALG_PY/000_DOC/scripts_curso_ice/tsp.py",
+		"/F/003_CODE/Git/GEN_ALG_PY/151104_Test_ICE.py",
+		"/F/003_CODE/Git/GEN_ALG_PY/151103_floatmax.py",
+		"/F/003_CODE/Git/GEN_ALG_PY/000_DOC/scripts_curso_ice/grafica_2.py",
+		"/F/003_CODE/Quixote_003.py",
+		"/F/003_CODE/Git/GEN_ALG_PY/000_DOC/scripts_curso_ice/singlemaxsimple.py",
+		"/F/003_CODE/Git/GEN_ALG_PY/000_DOC/scripts_curso_ice/leo_linea.py",
+		"/F/003_CODE/Git/GEN_ALG_PY/000_DOC/scripts_curso_ice/clase.py",
+		"/F/003_CODE/Git/GEN_ALG_PY/151027_clase_alumno_000.py",
+		"/F/003_CODE/Git/GEN_ALG_PY/151026_numpy_001.py",
+		"/F/003_CODE/Git/GEN_ALG_PY/000_DOC/scripts_curso_ice/array1.py",
+		"/C/Python27/deap-1.0.2/examples/eda/fctmin.py",
+		"/F/003_CODE/Git/GEN_ALG_PY/151027_clase_alumno_000",
+		"/C/Python27/deap-1.0.2/examples/coev/coop_evol.py",
+		"/C/Python27/deap-1.0.2/examples/coev/coop_adapt.py",
+		"/C/Python27/deap-1.0.2/examples/coev/symbreg.py",
+		"/C/Python27/deap-1.0.2/setup.py",
+		"/F/003_CODE/Git/GEN_ALG_PY/000_DOC/scripts_curso_ice/ficheros_escritura.py",
+		"/F/003_CODE/Git/GEN_ALG_PY/000_DOC/scripts_curso_ice/ficheros_lectura.py",
+		"/F/003_CODE/Git/GEN_ALG_PY/000_DOC/scripts_curso_ice/ficheros_escritura_2.py",
+		"/F/003_CODE/Git/GEN_ALG_PY/000_DOC/scripts_curso_ice/funciones_5.py",
+		"/F/003_CODE/Git/GEN_ALG_PY/000_DOC/scripts_curso_ice/funciones_4.py",
+		"/F/003_CODE/Git/GEN_ALG_PY/151026_test_001.py",
+		"/F/003_CODE/Git/GEN_ALG_PY/151026_test_000.py",
+		"/F/003_CODE/Git/GEN_ALG_PY/000_DOC/scripts_curso_ice/funciones_3.py",
+		"/F/003_CODE/Git/Processing3/00_SKT/Bush_01/Bush_01.pde",
+		"/F/003_CODE/Git/Processing3/00_SKT/Bush_01/Bush.pde",
+		"/F/003_CODE/Git/Processing3/00_SKT/Bush_01/World.pde",
+		"/F/003_CODE/Git/Processing3/00_SKT/TreesBuilder_02/TreesBuilder_02.pde",
+		"/F/003_CODE/Git/GH2SAP/README.md",
+		"/C/Users/Ángel/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap",
+		"/C/Users/Ángel/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/Ángel/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/F/003_CODE/Git/Processing3/00_SKT/.gitignore",
+		"/F/003_CODE/Git/Processing3/TreesBuilder_02/Tree.pde",
+		"/F/003_CODE/Git/Processing3/TreesBuilder_02/TreesBuilder_02.pde",
+		"/F/003_CODE/Git/Processing3/TreesBuilder/TreesBuilder.pde",
+		"/C/Users/Ángel/AppData/Roaming/Sublime Text 3/Packages/Processing/Build Systems/Processing.sublime-build",
+		"/C/Users/Ángel/AppData/Roaming/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings",
+		"/F/002_Dropbox/Dropbox/PFC/CAD/CODE/ModuleClass002.py",
+		"/C/Users/Ángel/Desktop/Test.py",
+		"/C/Users/Ángel/AppData/Roaming/Sublime Text 3/Packages/SublimeCodeIntel/.codeintel/config",
+		"/C/Users/Ángel/AppData/Roaming/Sublime Text 3/Packages/User/SublimeCodeIntel.sublime-settings",
+		"/C/Users/Ángel/AppData/Roaming/Sublime Text 3/Packages/Anaconda/Anaconda.sublime-settings",
+		"/C/Users/Ángel/AppData/Roaming/Sublime Text 3/Packages/User/Plain text.sublime-settings",
+		"/C/Users/Ángel/AppData/Roaming/Sublime Text 3/Packages/User/sublime_jedi.sublime-settings",
+		"/C/Users/Ángel/AppData/Roaming/Sublime Text 3/Packages/Anaconda/README.md",
+		"/C/Users/Ángel/AppData/Roaming/Sublime Text 3/Packages/User/SublimeREPL.sublime-settings",
+		"/F/003_CODE/Git/Processing/ZZZ_sketches/20141125_Patterns/Patterns/Patterns.pde",
+		"/F/003_CODE/Git/Processing/ZZZ_sketches/20141125_Patterns/Patterns/Patterns",
+		"/F/003_CODE/Git/Processing/ZZZ_sketches/LOGOTOP5_007/LOGOTOP5_007.sublime-project",
+		"/H/N7/N7.pde",
+		"/F/004_WORK/002_Blurrypaths/Croquis desde parámetros/3DM/130602_Raindrop.py",
+		"/F/003_CODE/Git/Processing/ZZZ_sketches/LOGOTOP5_007/Agent.pde",
+		"/F/003_CODE/Git/Processing/ZZZ_sketches/LOGOTOP5_007/World.pde",
+		"/F/003_CODE/Git/Processing/ZZZ_sketches/LOGOTOP5_007/Breed.pde",
+		"/F/003_CODE/Git/Processing/ZZZ_sketches/LOGOTOP5_004/LOGOTOP5_004.pde",
+		"/F/003_CODE/Git/Processing/ZZZ_sketches/LOGOTOP5_008/LOGOTOP5_008.pde",
+		"/F/003_CODE/Git/Processing/ZZZ_sketches/LOGOTOP5_007/LOGOTOP5_007.pde",
+		"/F/003_CODE/Git/Processing/ZZZ_sketches/kinect2_20141008_01/kinect2_20141008_01.pde",
+		"/F/003_CODE/Git/Processing/libraries/KinectPV2/KinectPV2/examples/SkeletonColor/SkeletonColor.pde",
+		"/F/003_CODE/Git/Processing/ZZZ_sketches/kinect2_20141008_01/build-tmp/source/kinect2_20141008_01.java",
+		"/F/003_CODE/Git/Processing/ZZZ_sketches/growing_000/growing_000.pde",
+		"/F/003_CODE/Git/Processing/ZZZ_sketches/growing_000/tree_000.pde",
+		"/F/003_CODE/Git/Processing/ZZZ_sketches/build_test_000/build_test_000.pde",
+		"/F/003_CODE/Git/Processing/modes/PythonMode/examples/Basics/Color/ColorVariables/ColorVariables.pyde",
+		"/C/Users/Ángel/AppData/Roaming/Sublime Text 3/Packages/Processing/Processing.sublime-build",
+		"/C/Program Files/Sublime Text 3/Packages/Python.sublime-package",
+		"/C/Users/Ángel/AppData/Roaming/Sublime Text 3/Packages/User/testGDL.YAML-tmLanguage",
+		"/F/003_CODE/Git/MITx_6.00.1x/L5_P3.py",
+		"/F/003_CODE/Git/MITx_6.00.1x/Final Exam/P5_1_a.py",
+		"/F/003_CODE/Git/MITx_6.00.1x/L12_P5_a",
+		"/F/003_CODE/Git/MITx_6.00.1x/Final Exam/P6_7_a.py",
+		"/F/003_CODE/Git/Ejercicios/ZZ_Tests/Sublime_rhinoscript_001.py",
+		"/C/Users/Ángel/AppData/Roaming/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
+		"/C/Users/Ángel/AppData/Roaming/Sublime Text 3/Packages/SublimeREPL/SublimeREPL.sublime-settings",
+		"/F/003_CODE/Git/MITx_6.00.1x/ps3_hangman.py",
+		"/F/003_CODE/Git/MITx_6.00.1x/PS3a_a.py",
+		"/F/003_CODE/Git/MITx_6.00.1x/Quiz_P5_a.py",
+		"/F/003_CODE/Git/MITx_6.00.1x/W4_exceptionsPractice_a",
+		"/C/Users/Ángel/AppData/Roaming/McNeel/Rhinoceros/5.0/Plug-ins/IronPython (814d908a-e25c-493d-97e9-ee3861957f49)/settings/lib/scriptcontext.py",
+		"/C/Users/Ángel/AppData/Roaming/McNeel/Rhinoceros/5.0/Plug-ins/IronPython (814d908a-e25c-493d-97e9-ee3861957f49)/settings/lib/rhinoscriptsyntax.py",
+		"/F/003_CODE/Git/MITx_6.00.1x/PS7a_a.py",
+		"/F/003_CODE/002_MakeLab/20140405_Sound_parsing.py",
+		"/F/003_CODE/Git/MITx_6.00.1x/Quiz_P6_a.py",
+		"/F/003_CODE/Git/MITx_6.00.1x/Quiz_P7_a.py",
+		"/F/003_CODE/Git/MITx_6.00.1x/Quiz_P8_a.py",
+		"/F/003_CODE/Git/MITx_6.00.1x/ProblemSet4/ps4a_beta.py",
+		"/F/003_CODE/Git/MITx_6.00.1x/ProblemSet4/ps4b_wip_a.py",
+		"/F/003_CODE/Git/MITx_6.00.1x/ProblemSet4/GetBestWord.py",
+		"/F/003_CODE/Git/MITx_6.00.1x/ProblemSet4/AreLetters_a.py",
+		"/F/003_CODE/Git/MITx_6.00.1x/W4_exceptionsPractice_a.py",
+		"/F/vote.py",
+		"/C/Users/Ángel/Desktop/Alumnos_marzoabril",
+		"/F/003_CODE/Git/MITx_6.00.1x/ProblemSet4/test_ps4a.py",
+		"/F/003_CODE/Git/MITx_6.00.1x/Problem Sets/SP3a_m.py",
+		"/F/003_CODE/Git/MITx_6.00.1x/L5_P2.py"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"pdb",
+			"gha",
+			"bin",
+			"width/2",
+			"newPt3",
+			"Fitness",
+			"attr_bool",
+			"strCadena2",
+			"strCadena",
+			"cell",
+			"Tree",
+			"stroke",
+			"lastPt",
+			"25",
+			"vPositive",
+			"self",
+			"\\\\",
+			"path",
+			"extra_paths",
+			"world",
+			"oscp5",
+			"osc",
+			"oscevent",
+			"osceve",
+			"xcor",
+			"turtles",
+			"parent_a",
+			"notParentFound",
+			"anualInterestRate",
+			"dbloldbalance",
+			"dblanualInterest",
+			"dblbalance",
+			"balance",
+			"words",
+			"file",
+			"repl",
+			"ctrl+,",
+			"a"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 168.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/Processing/Build Systems/Processing.sublime-build",
+	"project": "snippets.sublime-project",
+	"replace":
+	{
+		"height": 44.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 202.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -31,7 +31,6 @@ Public Class DefFrameSection_R
         pManager.AddNumberParameter("BFWidth", "T2B", "Bottom flange width", GH_ParamAccess.item, 0.15)
         pManager.AddNumberParameter("BFThick", "TFB", "Bottom flange thickness", GH_ParamAccess.item, 0.0107)
         pManager.AddIntegerParameter("Color", "C", "Display color assigned to the section", GH_ParamAccess.item, -1)
-
         pManager.AddBooleanParameter("Start", "S", "Boolean flag to start importing", GH_ParamAccess.item, False)
 
         'We should add Notes and GUID as input in future revisions.
