@@ -158,9 +158,11 @@ Public Class ShellImport
     'Create an instance of the form
     Private PopUp As Form1
 
+    'Draws a form with the desired options
     Private Sub TestItem(ByVal sender As Object, ByVal e As EventArgs)
         If (PopUp IsNot Nothing) Then PopUp.Dispose()
         PopUp = New Form1()
+        PopUp.ShowDialog()
     End Sub
 
 #End Region
@@ -168,7 +170,7 @@ Public Class ShellImport
     'Overriding menu items
     Protected Overrides Sub AppendAdditionalComponentMenuItems(menu As ToolStripDropDown)
         MyBase.AppendAdditionalComponentMenuItems(menu)
-        GH_DocumentObject.Menu_AppendItem(menu, "Contact", AddressOf TestItem)
+        GH_DocumentObject.Menu_AppendItem(menu, "Pop!", AddressOf TestItem)
 
     End Sub
 
