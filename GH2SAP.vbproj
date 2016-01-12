@@ -86,7 +86,7 @@
   <ItemGroup>
     <Compile Include="DefFrameSection_C.vb" />
     <Compile Include="DefFrameSection_I.vb" />
-    <None Include="DefMaterial.vb" />
+    <Compile Include="DefMaterial.vb" />
     <Compile Include="DefFrameSection_R.vb" />
     <Compile Include="Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
