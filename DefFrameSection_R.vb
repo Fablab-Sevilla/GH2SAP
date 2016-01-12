@@ -6,14 +6,14 @@ Imports GH2SAP.GH2SAPIO
 Imports SAP2000v17
 
 
-Public Class DefFrameSection_I
+Public Class DefFrameSection_R
     Inherits GH_Component
     ''' <summary>
     ''' Initializes a new instance of the DefFrameSection class.
     ''' </summary>
     Public Sub New()
         MyBase.New("FrameSection", "FS", _
-                    "Defines a new I frame section in SAP2000 or modifies and existing one", _
+                    "Defines a new rectangular frame section in SAP2000 or modifies and existing one", _
                     "GH2SAP", "Define")
     End Sub
 
@@ -95,7 +95,7 @@ Public Class DefFrameSection_I
         Get
             'You can add image files to your project resources and access them like this:
             ' return Resources.IconForThisComponent;
-            Return My.Resources.Frame_I
+            Return My.Resources.Frame_R
         End Get
     End Property
 

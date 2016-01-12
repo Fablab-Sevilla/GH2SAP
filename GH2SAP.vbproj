@@ -84,8 +84,10 @@
     <Import Include="System.Diagnostics" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DefFrameSection_C.vb" />
     <Compile Include="DefFrameSection_I.vb" />
-    <Compile Include="DefMaterial.vb" />
+    <None Include="DefMaterial.vb" />
+    <Compile Include="DefFrameSection_R.vb" />
     <Compile Include="FrImport.vb" />
     <Compile Include="GH2SAPInfo.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
