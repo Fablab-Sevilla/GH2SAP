@@ -21,15 +21,20 @@ Public Class DefMaterial
     ''' Registers all the input parameters for this component.
     ''' </summary>
     Protected Overrides Sub RegisterInputParams(pManager As GH_Component.GH_InputParamManager)
+
         pManager.AddTextParameter("Material", "MatName", "Material name", GH_ParamAccess.item, "New_Mat")
         pManager.AddTextParameter("Type", "MatType", "Material type", GH_ParamAccess.item, "MATERIAL_STEEL")
-        pManager.AddBooleanParameter("Start", "S", "Boolean flag to start importing", GH_ParamAccess.item, False)
+        pManager.AddBooleanParameter("Start", "S", "Boolean flag to start importing", GH_ParamAccess.item, True)
+
     End Sub
 
     ''' <summary>
     ''' Registers all the output parameters for this component.
     ''' </summary>
     Protected Overrides Sub RegisterOutputParams(pManager As GH_Component.GH_OutputParamManager)
+
+        pManager.AddBooleanParameter("Pass", "P", "Pass value. True when the area objects has been loaded into SAP2000", GH_ParamAccess.item)
+
     End Sub
 
     ''' <summary>
@@ -37,20 +42,35 @@ Public Class DefMaterial
     ''' </summary>
     ''' <param name="DA">The DA object is used to retrieve from inputs and store in outputs.</param>
     Protected Overrides Sub SolveInstance(DA As IGH_DataAccess)
-        'dimension variables
-        Dim SapModel As cSapModel
-        Dim ret As Long
-        Dim Name As String
 
-        'initialize new material property
-        ret = SapModel.PropMaterial.SetMaterial("Steel", MATERIAL_STEEL)
+        'Declaring variables
+        Dim sapModel As cSapModel
+        Dim strMatName As String = Nothing
+        Dim strMatType As String = Nothing
+        Dim bFlag As Boolean = True
+        Dim ret As Integer
+        'Dim Name As String
 
-        'assign isotropic mechanical properties
-        ret = SapModel.PropMaterial.SetMPIsotropic("Steel", 29500, 0.25, 0.000006)
+        If (Not DA.GetData(0, strMatName)) Then Return
+        If (Not DA.GetData(1, strMatType)) Then Return
+        If (Not DA.GetData(2, bFlag)) Then Return
 
-        'assign other properties
-        ret = SapModel.PropMaterial.SetOSteel_1("Steel", 55, 68, 60, 70, 1, 2, 0.02, 0.1, 0.2, -0.1)
-        'SetOSteel_1(Name,Fy,Fu,eFy,eFu,SSType,SSHysType,StrainAtHardening,StrainAtMaxStress,StrainAtRupture,FinalSlope, Optional Temp)
+        If bFlag Then
+
+            sapModel = mySapObject.SapModel
+
+            'initialize new material property
+            sapModel.PropMaterial.SetMaterial(strMatName, eMatType.Steel)
+
+            'assign isotropic mechanical properties
+            sapModel.PropMaterial.SetMPIsotropic("Steel", 29500, 0.25, 0.000006)
+
+            'assign other properties
+            sapModel.PropMaterial.SetOSteel_1("Steel", 55, 68, 60, 70, 1, 2, 0.02, 0.1, 0.2, -0.1)
+            'SetOSteel_1(Name,Fy,Fu,eFy,eFu,SSType,SSHysType,StrainAtHardening,StrainAtMaxStress,StrainAtRupture,FinalSlope, Optional Temp)
+
+        End If
+
 
     End Sub
 
