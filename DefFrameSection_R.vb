@@ -24,10 +24,10 @@ Public Class DefFrameSection_R
 
         pManager.AddTextParameter("Name", "N", "The name of an existing or new frame section property", GH_ParamAccess.item, "IPE300")
         pManager.AddTextParameter("MatProp", "M", "The name of the material property for the section", GH_ParamAccess.item, "A992Fy50")
-        pManager.AddNumberParameter("Height", "T3", "The section height", GH_ParamAccess.item, 0.3)
-        pManager.AddNumberParameter("TFWidth", "T2", "Top flange width", GH_ParamAccess.item, 0.15)
-        pManager.AddNumberParameter("TFThick", "TF", "Top flange thickness", GH_ParamAccess.item, 0.0107)
-        pManager.AddNumberParameter("WThick", "TW", "Web thickness", GH_ParamAccess.item, 0.0071)
+        pManager.AddNumberParameter("Height", "T3", "The section height", GH_ParamAccess.item, 0.1)
+        pManager.AddNumberParameter("TFWidth", "T2", "Top flange width", GH_ParamAccess.item, 0.05)
+        pManager.AddNumberParameter("TFThick", "TF", "Flange thickness", GH_ParamAccess.item, 0.005)
+        pManager.AddNumberParameter("WThick", "TW", "Web thickness", GH_ParamAccess.item, 0.005)
         pManager.AddNumberParameter("BFWidth", "T2B", "Bottom flange width", GH_ParamAccess.item, 0.15)
         pManager.AddNumberParameter("BFThick", "TFB", "Bottom flange thickness", GH_ParamAccess.item, 0.0107)
         pManager.AddIntegerParameter("Color", "C", "Display color assigned to the section", GH_ParamAccess.item, -1)
@@ -56,11 +56,10 @@ Public Class DefFrameSection_R
         'Declaring variables
         Dim strName As String = Nothing
         Dim strMatProp As String = Nothing
-        Dim dT3, dT2, dTF, dTW, dT2B, dTFB As Double
+        Dim dT3, dT2, dTF, dTW As Double
         Dim intColor, intTest As Integer
         Dim bFlag As Boolean
         Dim sapModel As cSapModel
-
 
         'Getting values from inputs
         If (Not DA.GetData(0, strName)) Then Return
@@ -69,16 +68,15 @@ Public Class DefFrameSection_R
         If (Not DA.GetData(3, dT2)) Then Return
         If (Not DA.GetData(4, dTF)) Then Return
         If (Not DA.GetData(5, dTW)) Then Return
-        If (Not DA.GetData(6, dT2B)) Then Return
-        If (Not DA.GetData(7, dTFB)) Then Return
         If (Not DA.GetData(8, intColor)) Then Return
         If (Not DA.GetData(9, bFlag)) Then Return
 
+        'Main check
         If bFlag Then
 
             sapModel = mySapObject.SapModel
 
-            intTest = sapModel.PropFrame.SetISection(strName, strMatProp, dT3, dT2, dTF, dTW, dT2B, dTFB, intColor)
+            intTest = sapModel.PropFrame.SetTube(strName, strMatProp, dT3, dT2, dTF, dTW, intColor)
 
         End If
 
@@ -104,7 +102,7 @@ Public Class DefFrameSection_R
     ''' </summary>
     Public Overrides ReadOnly Property ComponentGuid() As Guid
         Get
-            Return New Guid("{ce012be1-4222-4c58-ac9f-a1cb35dab897}")
+            Return New Guid("{03905594-8d2c-44d7-9a7d-963853d983d6}")
         End Get
     End Property
 End Class
