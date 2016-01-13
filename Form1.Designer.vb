@@ -27,9 +27,10 @@ Partial Class Form1
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -40,11 +41,20 @@ Partial Class Form1
         Me.TabPage6 = New System.Windows.Forms.TabPage()
         Me.TabPage7 = New System.Windows.Forms.TabPage()
         Me.TabPage8 = New System.Windows.Forms.TabPage()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.NumericUpDown2 = New System.Windows.Forms.NumericUpDown()
+        Me.NumericUpDown3 = New System.Windows.Forms.NumericUpDown()
+        Me.NumericUpDown4 = New System.Windows.Forms.NumericUpDown()
         Me.GroupBox1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
+        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NumericUpDown2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NumericUpDown3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NumericUpDown4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -69,7 +79,7 @@ Partial Class Form1
         '
         Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(16, 309)
+        Me.GroupBox1.Location = New System.Drawing.Point(16, 339)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(275, 48)
         Me.GroupBox1.TabIndex = 8
@@ -88,33 +98,60 @@ Partial Class Form1
         Me.TabControl1.Location = New System.Drawing.Point(12, 12)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(283, 291)
+        Me.TabControl1.Size = New System.Drawing.Size(283, 321)
         Me.TabControl1.TabIndex = 9
         '
         'TabPage1
         '
-        Me.TabPage1.Controls.Add(Me.TextBox3)
+        Me.TabPage1.Controls.Add(Me.NumericUpDown4)
+        Me.TabPage1.Controls.Add(Me.NumericUpDown3)
+        Me.TabPage1.Controls.Add(Me.NumericUpDown2)
+        Me.TabPage1.Controls.Add(Me.Label9)
+        Me.TabPage1.Controls.Add(Me.Label10)
+        Me.TabPage1.Controls.Add(Me.Label7)
+        Me.TabPage1.Controls.Add(Me.Label8)
+        Me.TabPage1.Controls.Add(Me.NumericUpDown1)
+        Me.TabPage1.Controls.Add(Me.Label6)
         Me.TabPage1.Controls.Add(Me.Label5)
-        Me.TabPage1.Controls.Add(Me.TextBox2)
         Me.TabPage1.Controls.Add(Me.Label4)
-        Me.TabPage1.Controls.Add(Me.TextBox1)
         Me.TabPage1.Controls.Add(Me.Label2)
         Me.TabPage1.Controls.Add(Me.ComboBox2)
         Me.TabPage1.Controls.Add(Me.Label3)
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(275, 265)
+        Me.TabPage1.Size = New System.Drawing.Size(275, 295)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Steel"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
-        'TextBox2
+        'NumericUpDown1
         '
-        Me.TextBox2.Location = New System.Drawing.Point(128, 64)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(135, 20)
-        Me.TextBox2.TabIndex = 13
+        Me.NumericUpDown1.DecimalPlaces = 3
+        Me.NumericUpDown1.Increment = New Decimal(New Integer() {5, 0, 0, 65536})
+        Me.NumericUpDown1.InterceptArrowKeys = False
+        Me.NumericUpDown1.Location = New System.Drawing.Point(132, 39)
+        Me.NumericUpDown1.Name = "NumericUpDown1"
+        Me.NumericUpDown1.Size = New System.Drawing.Size(135, 20)
+        Me.NumericUpDown1.TabIndex = 17
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(10, 119)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(119, 13)
+        Me.Label6.TabIndex = 16
+        Me.Label6.Text = "Coef. Thermal Exp. (A1)"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(10, 93)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(100, 13)
+        Me.Label5.TabIndex = 14
+        Me.Label5.Text = "Mod. Poisson (U12)"
         '
         'Label4
         '
@@ -125,27 +162,20 @@ Partial Class Form1
         Me.Label4.TabIndex = 12
         Me.Label4.Text = "Mod. Elasticity (E1)"
         '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(128, 38)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(135, 20)
-        Me.TextBox1.TabIndex = 11
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(10, 41)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(41, 13)
+        Me.Label2.Size = New System.Drawing.Size(100, 13)
         Me.Label2.TabIndex = 10
-        Me.Label2.Text = "Weight"
+        Me.Label2.Text = "Weight/unit volume"
         '
         'ComboBox2
         '
         Me.ComboBox2.FormattingEnabled = True
         Me.ComboBox2.Items.AddRange(New Object() {"Anisotropic", "Isotropic", "Orthotropic", "Uniaxial"})
-        Me.ComboBox2.Location = New System.Drawing.Point(128, 11)
+        Me.ComboBox2.Location = New System.Drawing.Point(132, 11)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(135, 21)
         Me.ComboBox2.TabIndex = 9
@@ -229,27 +259,77 @@ Partial Class Form1
         Me.TabPage8.Text = "Masonry"
         Me.TabPage8.UseVisualStyleBackColor = True
         '
-        'TextBox3
+        'Label7
         '
-        Me.TextBox3.Location = New System.Drawing.Point(128, 90)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(135, 20)
-        Me.TextBox3.TabIndex = 15
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(10, 193)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(117, 13)
+        Me.Label7.TabIndex = 19
+        Me.Label7.Text = "Min. Tensile Stress (Fu)"
         '
-        'Label5
+        'Label8
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(10, 93)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(100, 13)
-        Me.Label5.TabIndex = 14
-        Me.Label5.Text = "Mod. Poisson (U12)"
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(10, 168)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(105, 13)
+        Me.Label8.TabIndex = 18
+        Me.Label8.Text = "Min. Yield Stress (Fy)"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(10, 243)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(131, 13)
+        Me.Label9.TabIndex = 21
+        Me.Label9.Text = "Effec. Tensile Stress (Fue)"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(10, 218)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(119, 13)
+        Me.Label10.TabIndex = 20
+        Me.Label10.Text = "Effec. Yield Stress (Fye)"
+        '
+        'NumericUpDown2
+        '
+        Me.NumericUpDown2.DecimalPlaces = 3
+        Me.NumericUpDown2.Increment = New Decimal(New Integer() {5, 0, 0, 65536})
+        Me.NumericUpDown2.InterceptArrowKeys = False
+        Me.NumericUpDown2.Location = New System.Drawing.Point(132, 65)
+        Me.NumericUpDown2.Name = "NumericUpDown2"
+        Me.NumericUpDown2.Size = New System.Drawing.Size(135, 20)
+        Me.NumericUpDown2.TabIndex = 22
+        '
+        'NumericUpDown3
+        '
+        Me.NumericUpDown3.DecimalPlaces = 3
+        Me.NumericUpDown3.Increment = New Decimal(New Integer() {5, 0, 0, 65536})
+        Me.NumericUpDown3.InterceptArrowKeys = False
+        Me.NumericUpDown3.Location = New System.Drawing.Point(132, 91)
+        Me.NumericUpDown3.Name = "NumericUpDown3"
+        Me.NumericUpDown3.Size = New System.Drawing.Size(135, 20)
+        Me.NumericUpDown3.TabIndex = 23
+        '
+        'NumericUpDown4
+        '
+        Me.NumericUpDown4.DecimalPlaces = 3
+        Me.NumericUpDown4.Increment = New Decimal(New Integer() {5, 0, 0, 65536})
+        Me.NumericUpDown4.InterceptArrowKeys = False
+        Me.NumericUpDown4.Location = New System.Drawing.Point(132, 117)
+        Me.NumericUpDown4.Name = "NumericUpDown4"
+        Me.NumericUpDown4.Size = New System.Drawing.Size(135, 20)
+        Me.NumericUpDown4.TabIndex = 24
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(307, 369)
+        Me.ClientSize = New System.Drawing.Size(307, 399)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "Form1"
@@ -259,6 +339,10 @@ Partial Class Form1
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
+        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NumericUpDown2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NumericUpDown3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NumericUpDown4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -277,9 +361,16 @@ Partial Class Form1
     Friend WithEvents TabPage6 As System.Windows.Forms.TabPage
     Friend WithEvents TabPage7 As System.Windows.Forms.TabPage
     Friend WithEvents TabPage8 As System.Windows.Forms.TabPage
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents NumericUpDown1 As System.Windows.Forms.NumericUpDown
+    'Friend WithEvents NumericUpDown1 As NumericUpDownUnits
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents NumericUpDown4 As System.Windows.Forms.NumericUpDown
+    Friend WithEvents NumericUpDown3 As System.Windows.Forms.NumericUpDown
+    Friend WithEvents NumericUpDown2 As System.Windows.Forms.NumericUpDown
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents Label8 As System.Windows.Forms.Label
 End Class
