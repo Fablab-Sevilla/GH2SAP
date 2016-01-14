@@ -154,6 +154,7 @@
     <None Include="Resources\Pt.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\gh2sap1.png" />
     <None Include="Resources\Mat_Steel.png" />
     <None Include="Resources\Mat_Concrete.png" />
     <None Include="Resources\Frame_I.png" />
